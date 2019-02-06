@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vue Intro</title>
+
+    <!-- production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
 </head>
 
 <body>
@@ -16,19 +20,20 @@
             Hover your mouse over me for a few seconds
             to see my dynamically bound title!
         </span>
+        <br>
+        <span v-if="seen">
+            You are seeing this because seen condition is true !
+        </span>
+        <br>
+        <br>
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
     </div>
 
-    <!-- production version, optimized for size and speed -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script type="text/javascript">
-        var app = new Vue({
-            el: '#app',
-            data: {
-                message: 'Hello Vue!',
-                message2: 'You loaded this page on ' + new Date().toLocaleString()
-            }
-        })
-    </script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
