@@ -14,7 +14,11 @@ var app = new Vue({
                 text: 'Build Something Awesome'
             }
         ]
-
+    },
+    methods: {
+        reverseMessage: function () {
+            this.message = this.message.split('').reverse().join('')
+        }
     }
 });
 
