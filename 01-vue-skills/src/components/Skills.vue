@@ -13,6 +13,9 @@
       <p v-if="skills.length >= 1">You have more than 1 skills</p>
       <p v-else>You have less than or equal to 1 skill</p>
     </div>
+    <div v-bind:class="{ alert: showAlert }">Alert</div>
+    <div v-bind:class="{ alert: !showAlert }">Not Alert</div>
+    <div v-bind:class="{ alert: showAlert, 'another-class': showClass }">Alert with Border</div>
   </div>
 </template>
 
@@ -27,7 +30,9 @@ export default {
         { skill: "Vue.js" },
         { skill: "JavaScript" },
         { skill: "Angular" }
-      ]
+      ],
+      showAlert: true,
+      showClass: true
     };
   }
   // props: {
@@ -51,5 +56,13 @@ li {
 }
 a {
   color: #42b983;
+}
+.alert {
+  background-color: crimson;
+  width: 100%;
+  height: auto;
+}
+.another-class {
+  border: 5px solid #505050;
 }
 </style>
