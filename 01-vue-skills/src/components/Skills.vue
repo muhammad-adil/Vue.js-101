@@ -6,13 +6,32 @@
     <button v-on:click="changeName" v-bind:disabled="btnState">Disabled button</button>-->
     <div class="holder">
       <form @submit.prevent="addSkill">
-        <input type="text" placeholder="Enter a skill you have..." v-model="skill">
-        <input type="checkbox" id="checkbox" v-model="checked">
+        <input
+          type="text"
+          placeholder="Enter a skill you have..."
+          v-model="skill"
+          v-validate="'min:5'"
+          name="skill"
+        >
+        <transition
+          name="alert-in"
+          enter-active-class="animated flipInX"
+          leave-active-class="animated flipOutX"
+        >
+          <p class="alert-white" v-if="errors.has('skill')">{{ errors.first('skill') }}</p>
+          <!-- <input type="checkbox" id="checkbox" v-model="checked"> -->
+        </transition>
       </form>
 
       <ul>
-        <li v-for="(data, index) in skills" :key="index">{{ index }}. {{ data.skill }}</li>
-        <li>{{skill}}</li>
+        <transition
+          name="alert-in"
+          enter-active-class="animated bounceInUp"
+          leave-active-class="animated bounceOutDown"
+        >
+          <li v-for="(data, index) in skills" :key="index">{{ index }}. {{ data.skill }}</li>
+          <li>{{skill}}</li>
+        </transition>
       </ul>
 
       <div class="pg__footer">
@@ -59,9 +78,15 @@ export default {
   },
   methods: {
     addSkill() {
-      this.skills.push({ skill: this.skill });
-      this.skill = "";
-      console.log("this checkbox value is:" + this.checked);
+      this.$validator.validateAll().then(result => {
+        if (result) {
+          this.skills.push({ skill: this.skill });
+          this.skill = "";
+        } else {
+          console.log("Not valid");
+        }
+      });
+      // console.log("this checkbox value is:" + this.checked);
     }
   }
   // props: {
@@ -72,6 +97,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
+
 h3 {
   margin: 40px 0 0;
 }
@@ -127,6 +154,13 @@ p {
 .container {
   box-shadow: 0px 0px 40px lightgray;
 }
+.alert {
+  background: #fdf2ce;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px;
+  margin-top: -20px;
+}
 input {
   width: calc(100% - 40px);
   border: 0;
@@ -134,5 +168,24 @@ input {
   font-size: 1.3em;
   background-color: #323333;
   color: #687f7f;
+}
+
+/* Animation */
+.alert-in-enter-active {
+  animation: bounce-in 0.5s;
+}
+.alert-in-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>

@@ -1,4 +1,4 @@
-# 01-vue-skills
+# 02-vue-comp
 
 ## Project setup
 ```
