@@ -1,29 +1,28 @@
 <template>
   <div>
-    <canvas id="planet-chart"></canvas>
-    <p>{{ name }}</p>
+    <canvas id="pie-chart"></canvas>
   </div>
 </template>
 
 <script>
 import Chart from "chart.js";
-import planetChartData from "../assets/chart-data.js";
+import pieChartData from "../assets/pieChart-data.js";
 
 export default {
-  name: "BasicChart",
+  name: "PieChart",
   props: {
     msg: String
   },
   data() {
     return {
       name,
-      planetChartData: planetChartData
+      pieChartData: pieChartData
     };
   },
   methods: {
     createChart(chartId, chartData) {
       const ctx = document.getElementById(chartId);
-      const myChart = new Chart(ctx, {
+      const myPieChart = new Chart(ctx, {
         type: chartData.type,
         data: chartData.data,
         options: chartData.options
@@ -31,7 +30,7 @@ export default {
     }
   },
   mounted() {
-    this.createChart("planet-chart", this.planetChartData);
+    this.createChart("pie-chart", this.pieChartData);
   }
 };
 </script>

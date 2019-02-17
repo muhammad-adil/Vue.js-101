@@ -4,16 +4,20 @@
     <BasicChart msg="Welcome to My Basic Chart.js Vue App">
       <!-- <p>{{ name }}</p> -->
     </BasicChart>
+    <br>
+    <PieChart/>
   </div>
 </template>
 
 <script>
 import BasicChart from "./components/BasicChart.vue";
+import PieChart from "./components/PieChart.vue";
 
 export default {
   name: "app",
   components: {
-    BasicChart
+    BasicChart,
+    PieChart
   }
 };
 </script>
