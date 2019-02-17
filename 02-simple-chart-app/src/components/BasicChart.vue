@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <canvas id="planet-chart"></canvas>
     <p>{{ name }}</p>
   </div>

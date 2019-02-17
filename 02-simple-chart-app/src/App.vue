@@ -31,4 +31,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.container {
+  margin: 0 auto;
+  width: 768px;
+}
+.m-t-20 {
+  margin-top: 20px;
+}
 </style>

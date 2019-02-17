@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container m-t-20">
     <canvas id="pie-chart"></canvas>
   </div>
 </template>
