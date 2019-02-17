@@ -3,7 +3,7 @@ const pieChartData = {
     data: {
         labels: ['Mercury', 'Earth', 'Mars', 'Uranus', 'Neptune'],
         datasets: [{ // pie chart
-            label: '% of Life',
+            label: 'Chances of Life',
             type: 'pie',
             data: [3, 98, 40, 2, 1],
             backgroundColor: [

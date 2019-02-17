@@ -38,4 +38,7 @@ export default {
 .m-t-20 {
   margin-top: 20px;
 }
+.m-b-20 {
+  margin-bottom: 20px;
+}
 </style>

@@ -1,7 +1,8 @@
 <template>
   <div class="container">
+    <h3>Number of Moons &amp; Investment on Planets</h3>
     <canvas id="planet-chart"></canvas>
-    <p>{{ name }}</p>
+    <!-- <p>{{ name }}</p> -->
   </div>
 </template>
 
@@ -38,5 +39,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 </style>

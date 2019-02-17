@@ -1,5 +1,6 @@
 <template>
-  <div class="container m-t-20">
+  <div class="container m-t-20 m-b-20">
+    <h3>Chances of Life</h3>
     <canvas id="pie-chart"></canvas>
   </div>
 </template>
