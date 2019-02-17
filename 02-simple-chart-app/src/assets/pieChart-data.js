@@ -2,7 +2,7 @@ const pieChartData = {
     type: 'pie',
     data: {
         labels: ['Mercury', 'Earth', 'Mars', 'Uranus', 'Neptune'],
-        datasets: [{ // one line graph
+        datasets: [{ // pie chart
             label: '% of Life',
             type: 'pie',
             data: [3, 98, 40, 2, 1],

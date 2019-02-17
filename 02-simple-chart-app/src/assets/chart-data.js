@@ -3,7 +3,7 @@ const planetChartData = {
   type: 'bar',
   data: {
     labels: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'],
-    datasets: [{ // one line graph
+    datasets: [{ // graph
         label: 'Number of Moons',
         type: 'line',
         data: [64, 100, 1, 31, 67, 62, 27, 14],
