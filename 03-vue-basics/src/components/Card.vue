@@ -8,7 +8,7 @@
     <ul>
       <li v-for="(item, index) in items">
         <button v-on:click="deleteItem(index)">X</button>
-        {{ item.text }}
+        {{ item.text | capitalize }}, {{item.value}}
       </li>
     </ul>
     <br />
@@ -25,10 +25,10 @@ export default {
       contentWithHtml:
         "I am with html <strong>tags</strong>, Anything <i>can</i>....",
       items: [
-        { text: "Card 1" },
-        { text: "Card 2" },
-        { text: "Card 3" },
-        { text: "Card 4" }
+        { text: "Card 1", value: "15" },
+        { text: "one more card 2", value: "05" },
+        { text: "A new Card 3", value: "45" },
+        { text: "another Card 4", value: "25" }
       ]
     };
   },
@@ -45,6 +45,25 @@ export default {
     deleteItem: function(index) {
       this.items.splice(index, 1);
     }
+  },
+  filters: {
+    capitalize: function(value) {
+      if (!value) return "";
+      value = value.toString();
+      return value.charAt(0).toUpperCase() + value.slice(1);
+    },
+    undercase: function(value) {
+      if (!value) return "";
+      value = value.toString();
+      return value.toLowerCase();
+    }
+    //,
+    // Url filter
+    // url: function(value) {
+    //   if (!value) return "";
+    //   value = value.toString();
+    //   return "https://en.wikipidea.org/wiki/" + value;
+    // }
   }
 };
 </script>
