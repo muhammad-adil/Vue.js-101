@@ -38,21 +38,32 @@
         <span>Updated: {{ speciesUpdated }}</span>
       </li>
     </ul>
+    <br />
+    <br />
+    <hr />
+    <br />
+    <br />
+    <form v-on:submit.prevent="addFormItem">
+      <input id="itemForm" v-model="inputWatch" />
+      <button v-bind:disabled="buttonDisabled">{{ buttonText}}</button>
+    </form>
   </div>
 </template>
 <script>
+import { debounce } from "lodash";
 export default {
   data() {
     return {
       title: "Vue-basics",
-      content: "Anything can come here....",
+      content: "Anything can come here...",
       contentWithHtml:
-        "I am with html <strong>tags</strong>, Anything <i>can</i>....",
+        "I am with html <strong>tags</strong>, Anything <i>can</i>...",
       //   totalDinos: 0,
       //   totalSpecies: 0,
       speciesUpdated: 0,
       dinosUpdated: 0,
-      input: "",
+      inputWatch: "",
+      buttonText: "Dinosaurs",
       //   items: [
       //     { text: "Card 1", value: "15" },
       //     { text: "one more card 2", value: "05" },
@@ -154,6 +165,12 @@ export default {
     // totalSpecies: function() {
     //   return this.items.length;
     // }
+  },
+  watch: {
+    inputWatch: _.debounce(function() {
+      this.buttonText =
+        this.inputWatch !== "" ? "Add " + this.inputWatch : "Add Dinosaur";
+    }, 150)
   }
 };
 </script>
