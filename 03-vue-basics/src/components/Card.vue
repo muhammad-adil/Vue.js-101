@@ -138,6 +138,9 @@ export default {
     // }
   },
   computed: {
+    buttonDisabled: function() {
+      return this.input == "";
+    },
     totalDinos: function() {
       this.dinosUpdated += 1;
       var sum = 0;
