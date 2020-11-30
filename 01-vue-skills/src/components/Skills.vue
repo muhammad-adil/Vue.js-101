@@ -81,9 +81,9 @@ export default {
       this.$validator.validateAll().then(result => {
         if (result) {
           this.skills.push({ skill: this.skill });
-          this.skill = "";
+          this.skill = ""
         } else {
-          console.log("Not valid");
+          // console.warning("Not valid", this.skills)
         }
       });
       // console.log("this checkbox value is:" + this.checked);
