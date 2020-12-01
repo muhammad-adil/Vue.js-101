@@ -1,11 +1,5 @@
 <template>
   <div class="calculator">
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <!-- eslint-disable-next-line -->
-    <h2>AppVersion {{ version }}, VueVersion {{ $store.getters.vueVersion }}</h2>
-  </div>
-
     <div class="display">{{current || '0'}}</div>
     <div @click="clear" class="btn">C</div>
     <div @click="sign" class="btn">+/-</div>
@@ -29,18 +23,13 @@
   </div>
 </template>
 <script>
-
 export default {
-  name: "HelloWorld",
+  name: "Calculator",
   props: {
     msg: String
   },
   data() {
     return {
-      // vueVersion
-      // process.env.VUE_APP_VERSION = require('./package.json').version,
-      version: process.env.VUE_APP_VERSION,
-      title: process.env.VUE_APP_TITLE,
       previous: null,
       current: '',
       operator: null,
@@ -97,35 +86,12 @@ export default {
       )}`;
       this.previous = null;
     }
-  },
-  computed: {
-    appVersion () {
-      return this.$store.getters.appVersion;
-    } 
-    // other computed values here
-  },
-  mounted () {
-    console.info('App version ' + this.$store.getters.appVersion)
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 .calculator {
   margin: 0 auto;
   width: 400px;
