@@ -1,7 +1,7 @@
 <template>
   <div class="calculator">
     <div class="display">{{ current || "0" }}</div>
-    <div @click="clear" class="btn">C</div>
+    <div @click="clear" class="btn btn-cancel">C</div>
     <div @click="sign" class="btn">+/-</div>
     <div @click="percent" class="btn">%</div>
     <div @click="divide" class="btn operator">÷</div>
@@ -94,7 +94,7 @@ export default {
 <style scoped>
 .calculator {
   margin: 0 auto;
-  width: 400px;
+  width: 460px;
   font-size: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -104,13 +104,18 @@ export default {
   grid-column: 1 / 5;
   background-color: #333;
   color: white;
+  height: 60px;
 }
 .zero {
   grid-column: 1 / 3;
+  background-color: #805edb !important;
 }
 .btn {
   background-color: #f2f2f2;
   border: 1px solid #999;
+}
+.btn-cancel {
+  background-color: #ff0000 !important;
 }
 .operator {
   background-color: orange;
