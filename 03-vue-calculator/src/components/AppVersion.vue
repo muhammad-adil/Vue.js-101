@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <!-- <h1>{{ msg }}</h1> -->
     <!-- eslint-disable-next-line -->
     <h2 class="app-version-text">AppVersion {{ version }}, VueVersion {{ $store.getters.vueVersion }}</h2>
   </div>
@@ -19,22 +18,22 @@ export default {
       title: process.env.VUE_APP_TITLE
     };
   },
-   
   computed: {
-    appVersion () {
+    appVersion() {
       return this.$store.getters.appVersion;
-    } 
+    }
     // other computed values here
   },
-  mounted () {
-    console.info('App version ' + this.$store.getters.appVersion)
+  mounted() {
+    // console.info('App version ' + this.$store.getters.appVersion)
+    console.info("App version-" + this.version);
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.app-version-text{
+.app-version-text {
   font-size: 22px;
 }
 </style>

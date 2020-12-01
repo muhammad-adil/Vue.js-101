@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-     <Calculator />
+    <img class="app-logo" alt="Vue logo" src="./assets/logo.png" />
+    <AppVersion />
+    <Calculator />
   </div>
 </template>
 
 <script>
+import AppVersion from "./components/AppVersion.vue";
 import Calculator from "./components/Calculator.vue";
 
 export default {
   name: "App",
   components: {
-    Calculator
+    Calculator,
+    AppVersion
   }
 };
 </script>
@@ -25,5 +27,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.app-logo {
+  width: 72px;
 }
 </style>
