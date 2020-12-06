@@ -1,24 +1,9 @@
-# 03-vue-calculator-sfc
+# VueCalculator
 
-## Project setup
-```
-yarn install
-```
+Simple calculator project to hammer home some Vue concepts:
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Vue cli
+- Single File components
+- Vue Directives: v-for, v-on(@) and v-bind(:)
+- Custom Vue events and $emit-ing from child component
+- Velocity.js integration for blinker and button press animations

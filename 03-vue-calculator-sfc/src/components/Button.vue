@@ -37,23 +37,26 @@ export default {
 
 <style>
 #vuebutton {
-  margin: 0px;
+  margin: 10px 0px;
   height: 100px;
   box-sizing: border-box;
   float: left;
 }
 .calc-button{
-    width: 100%;
+    width: 90%;
     height: 100%;
     font-family: Lato, Verdana, sans-serif;
     text-align: center;
     font-size: 30px;
     color: white;
+    border: 2px solid #1e2435;
+    /* margin: 10px 10px 10px 10px; */
+    background: #1e2435;
 }
 .opButton{
-    background-color: #38908f;
+    background-color: #52c9dc;
 }
 .regButton{
-    background-color: #676767;
+    background-color: #1e2435;
 }
 </style>

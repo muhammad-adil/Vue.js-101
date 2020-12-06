@@ -39,11 +39,14 @@ export default {
   border-radius: 5px;
   height: 200px;
   float: right;
+  background-color: #1a1b28;
 }
-#leftOf{
+#leftOf {
+  color:#fff;
   width: 99.75%;
 }
-#blinker{
+#blinker {
+  color:#fff;
   width: 1.00%;
 }
 #displayText,  #subText{
@@ -63,7 +66,8 @@ export default {
     height: 100px;
     font-size: 1.5em;
     color: #38908f;
-    border: none;
-    background-color: #f9f9f9;
+    border-top: 2px solid #fff;
+    /* background-color: #f9f9f9; */
+    background-color: #1a1b28;
 }
 </style>

@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import Display from './Display.vue'
-import Button from './Button.vue'
+import Display from './Display.vue';
+import Button from './Button.vue';
 
 export default {
   data: function () {
@@ -311,11 +311,12 @@ export default {
   width: 100%;
   margin: auto;
   box-sizing: border-box;
-  border: 15px solid black;
+  border: 15px solid #1a1b28;
   border-radius: 5px;
-  height: 700px;
+  height: 100%;
   overflow: hidden;
   box-shadow: 5px 5px 5px #4b4b4c;
+  background: #1a1b28;
 }
 
 @media screen and (min-width: 768px){
