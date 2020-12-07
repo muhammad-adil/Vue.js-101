@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Lh></Lh>
+    <LifeCycleHooks></LifeCycleHooks>
   </div>
 </template>
 
 <script>
-import Lh from './components/Lh.vue'
+import LifeCycleHooks from './components/LifeCycleHooks.vue'
 
 export default {
   name: 'App',
   components: {
-    Lh
+    LifeCycleHooks
   }
 }
 </script>

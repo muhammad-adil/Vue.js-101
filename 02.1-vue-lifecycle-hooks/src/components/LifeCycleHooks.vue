@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'Lh',
+  name: 'LifeCycleHooks',
   // props: {
   //   msg: String
   // }
@@ -15,6 +15,36 @@ export default {
     return {
       msg: "Lifecycle hooks"
     };
+  },
+
+  methods: {
+    test() {
+      console.log(this.msg, "this.msg");
+      this.msg = "Everything in updated now";
+    }
+  },
+  beforeCreate() {
+    alert("brefore created fired");
+  },
+
+  created() {
+    alert("created fired");
+  },
+
+  beforeMount() {
+    alert("before mount fired");
+  },
+
+  mounted() {
+    alert("mounted fired");
+  },
+
+  beforeUpdate() {
+    alert("before upadte fired");
+  },
+
+  updated() {
+    alert("updated fired");
   }
 }
 </script>
