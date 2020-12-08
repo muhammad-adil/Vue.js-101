@@ -19,7 +19,7 @@ export default {
 
   methods: {
     test() {
-      console.log(this.msg, "this.msg");
+      console.log("The msg is ", this.msg);
       this.msg = "Everything in updated now";
     }
   },
