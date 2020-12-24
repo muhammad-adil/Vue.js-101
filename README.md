@@ -27,3 +27,5 @@
 [Vue.js SSR API's documentation](https://ssr.vuejs.org/api/ "Vue.js SSR API's documentation")
 
 [Vue RX guide](https://github.com/vuejs/vue-rx "Vue RX")
+
+![Vue Roadmap](./vue-roadmap.svg)
