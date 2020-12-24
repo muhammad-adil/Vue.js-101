@@ -28,4 +28,4 @@
 
 [Vue RX guide](https://github.com/vuejs/vue-rx "Vue RX")
 
-![Vue Roadmap](./vue-roadmap.svg)
+![Vue Roadmap](https://raw.githubusercontent.com/Muhammad-Adil/Vue.js-101/master/Vue-roadmap.svg)
